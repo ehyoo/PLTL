@@ -9,6 +9,7 @@
 import Foundation
 
 class Translator {
+  //my very own implementation of a Pig Latin translator. 
   
   let punctuationArray = []
   

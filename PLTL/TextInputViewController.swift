@@ -31,11 +31,24 @@ class TextInputViewController: UIViewController {
   
   @IBAction func messageButtonAction(sender: AnyObject) {
     //calls the messageViewController
-    sendMessage()
+    if resultTextView.text.characters.count > 160 {
+      //160 being the maximum length of an SMS
+      presentErrorViewController("To send an SMS, your message must be below 160 characters!")
+    } else if resultTextView.text.characters.count <= 0{
+      presentErrorViewController("Your message doesn't have anything in it!")
+    } else {
+      sendMessage()
+    }
   }
   
   override func prefersStatusBarHidden() -> Bool {
     return true
+  }
+  
+  func presentErrorViewController(messageToDisplay: String) {
+    let alertViewController = UIAlertController(title: "Error!", message: messageToDisplay, preferredStyle: .Alert)
+    alertViewController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: nil))
+    self.presentViewController(alertViewController, animated: true, completion: nil)
   }
 
 }
