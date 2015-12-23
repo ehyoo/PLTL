@@ -10,12 +10,13 @@ import Foundation
 
 class Translator {
   
-  func toPigLatin(stringToTranslate: String) {
+  func toPigLatin(stringToTranslate: String) -> String {
     
     let vowelArray = ["a", "e", "i", "o", "u"]
     let stringToTranslateArray = stringToTranslate.characters.split{$0 == " "}.map(String.init)
     var translatedArray: [String] = []
     var translatedWord = ""
+    var finalTranslatedString = ""
     
     
     for word in stringToTranslateArray {
@@ -39,7 +40,8 @@ class Translator {
       }
     }
     
-    print(translatedArray)
+    finalTranslatedString = translatedArray.joinWithSeparator(" ")
+    return finalTranslatedString
   }
   
 }

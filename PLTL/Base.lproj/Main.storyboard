@@ -36,6 +36,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NI3-ud-aMi">
+                                <rect key="frame" x="41" y="387" width="133" height="30"/>
+                                <state key="normal" title="Share with a friend!"/>
+                                <connections>
+                                    <action selector="messageButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cy3-bw-2pE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>

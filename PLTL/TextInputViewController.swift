@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class TextInputViewController: UIViewController {
   
@@ -24,7 +25,12 @@ class TextInputViewController: UIViewController {
   }
     
   @IBAction func translateButtonAction(sender: AnyObject) {
-    translator.toPigLatin(userInputTextView.text)
+    userInputTextView.resignFirstResponder()
+    resultTextView.text = translator.toPigLatin(userInputTextView.text)
+  }
+  
+  @IBAction func messageButtonAction(sender: AnyObject) {
+    sendMessage()
   }
 
     /*
@@ -37,4 +43,24 @@ class TextInputViewController: UIViewController {
     }
     */
 
+}
+
+extension TextInputViewController: MFMessageComposeViewControllerDelegate {
+  
+  //to conform to the protocol- dismiss when message complete or when message cancelled.
+  func messageComposeViewController(controller: MFMessageComposeViewController, didFinishWithResult result: MessageComposeResult) {
+    self.dismissViewControllerAnimated(true, completion: nil)
+  }
+  
+  //to send the message
+  func sendMessage() {
+    let messageViewController = MFMessageComposeViewController()
+    
+    messageViewController.body = resultTextView.text
+    messageViewController.messageComposeDelegate = self
+    
+    self.presentViewController(messageViewController, animated: true, completion: nil)
+  }
+  
+  
 }
