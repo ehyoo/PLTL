@@ -33,6 +33,10 @@ class TextInputViewController: UIViewController {
     //calls the messageViewController
     sendMessage()
   }
+  
+  override func prefersStatusBarHidden() -> Bool {
+    return true
+  }
 
 }
 

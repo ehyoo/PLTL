@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Text Input View Controller-->
@@ -17,34 +18,98 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Hello Everyone" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BPn-KD-x24">
-                                <rect key="frame" x="20" y="20" width="240" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hello Everyone" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BPn-KD-x24">
+                                <rect key="frame" x="20" y="60" width="560" height="190"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4B-oM-pBM">
-                                <rect key="frame" x="106" y="167" width="68" height="30"/>
-                                <state key="normal" title="Translate!"/>
-                                <connections>
-                                    <action selector="translateButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ebH-sE-Nio"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Result" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zRx-lC-Ubb">
-                                <rect key="frame" x="20" y="205" width="240" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Result" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zRx-lC-Ubb">
+                                <rect key="frame" x="20" y="330" width="560" height="190"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NI3-ud-aMi">
-                                <rect key="frame" x="41" y="387" width="133" height="30"/>
-                                <state key="normal" title="Share with a friend!"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NI3-ud-aMi">
+                                <rect key="frame" x="20" y="530" width="560" height="60"/>
+                                <color key="backgroundColor" red="0.69019607843137254" green="0.84313725490196079" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="YcC-ta-fpU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                <state key="normal" title="Message a Friend!">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="messageButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cy3-bw-2pE"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pig Latin Translator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ob-a0-Dkd">
+                                <rect key="frame" x="20" y="10" width="560" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ncQ-N1-oaO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4B-oM-pBM">
+                                <rect key="frame" x="20" y="260" width="560" height="60"/>
+                                <color key="backgroundColor" red="0.69019607839999997" green="0.84313725490000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="EGI-V6-xYF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                <state key="normal" title="Translate!">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="translateButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ebH-sE-Nio"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.76078431372549016" blue="0.81960784313725488" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="NI3-ud-aMi" firstAttribute="top" secondItem="zRx-lC-Ubb" secondAttribute="bottom" constant="10" id="1SA-sL-Xz4"/>
+                            <constraint firstAttribute="trailing" secondItem="zRx-lC-Ubb" secondAttribute="trailing" constant="20" id="2Ky-oS-CYp"/>
+                            <constraint firstAttribute="trailing" secondItem="BPn-KD-x24" secondAttribute="trailing" constant="20" id="9ES-sO-Wqx"/>
+                            <constraint firstItem="BPn-KD-x24" firstAttribute="top" secondItem="1ob-a0-Dkd" secondAttribute="bottom" constant="10" id="Br2-Ks-LqS"/>
+                            <constraint firstItem="BPn-KD-x24" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="GBw-ch-Ahq"/>
+                            <constraint firstItem="1ob-a0-Dkd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="I3q-av-THF"/>
+                            <constraint firstAttribute="trailing" secondItem="NI3-ud-aMi" secondAttribute="trailing" constant="20" id="ITj-8I-93q"/>
+                            <constraint firstItem="zRx-lC-Ubb" firstAttribute="top" secondItem="i4B-oM-pBM" secondAttribute="bottom" constant="10" id="JgD-2M-k9J"/>
+                            <constraint firstItem="i4B-oM-pBM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TaM-tz-MUs"/>
+                            <constraint firstItem="NI3-ud-aMi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="YRP-Uz-V0L"/>
+                            <constraint firstItem="i4B-oM-pBM" firstAttribute="top" secondItem="BPn-KD-x24" secondAttribute="bottom" constant="10" id="YeU-IK-LVx"/>
+                            <constraint firstItem="zRx-lC-Ubb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="aQd-As-9cU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BPn-KD-x24" secondAttribute="trailing" id="bI6-e5-rTk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1ob-a0-Dkd" secondAttribute="trailing" id="cQz-14-oUe"/>
+                            <constraint firstItem="BPn-KD-x24" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="d4s-Je-vfL"/>
+                            <constraint firstItem="1ob-a0-Dkd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="10" id="ffi-Zp-NQj"/>
+                            <constraint firstAttribute="trailing" secondItem="i4B-oM-pBM" secondAttribute="trailing" constant="20" id="iYi-Ir-a2Q"/>
+                            <constraint firstItem="BPn-KD-x24" firstAttribute="height" secondItem="zRx-lC-Ubb" secondAttribute="height" id="kVM-Nb-din"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NI3-ud-aMi" secondAttribute="bottom" constant="10" id="lhC-dY-vUu"/>
+                            <constraint firstItem="i4B-oM-pBM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="r6a-xy-DPg"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="GBw-ch-Ahq"/>
+                                <exclude reference="bI6-e5-rTk"/>
+                                <exclude reference="TaM-tz-MUs"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="resultTextView" destination="zRx-lC-Ubb" id="VTL-46-TBv"/>
