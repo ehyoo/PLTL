@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		2BD7B0131C2A1AD200987F62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD7B0121C2A1AD200987F62 /* AppDelegate.swift */; };
-		2BD7B0151C2A1AD200987F62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD7B0141C2A1AD200987F62 /* ViewController.swift */; };
 		2BD7B0181C2A1AD200987F62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD7B0161C2A1AD200987F62 /* Main.storyboard */; };
 		2BD7B01A1C2A1AD200987F62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BD7B0191C2A1AD200987F62 /* Assets.xcassets */; };
 		2BD7B01D1C2A1AD200987F62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD7B01B1C2A1AD200987F62 /* LaunchScreen.storyboard */; };
 		2BD7B0281C2A1AD200987F62 /* PLTLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD7B0271C2A1AD200987F62 /* PLTLTests.swift */; };
 		2BD7B0331C2A1AD200987F62 /* PLTLUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD7B0321C2A1AD200987F62 /* PLTLUITests.swift */; };
+		2BD7B0411C2A1BED00987F62 /* TextInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD7B0401C2A1BED00987F62 /* TextInputViewController.swift */; };
+		2BD7B0431C2A1C9800987F62 /* PigLatinTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD7B0421C2A1C9800987F62 /* PigLatinTranslator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,6 @@
 /* Begin PBXFileReference section */
 		2BD7B00F1C2A1AD200987F62 /* PLTL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PLTL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD7B0121C2A1AD200987F62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2BD7B0141C2A1AD200987F62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2BD7B0171C2A1AD200987F62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2BD7B0191C2A1AD200987F62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BD7B01C1C2A1AD200987F62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +47,8 @@
 		2BD7B02E1C2A1AD200987F62 /* PLTLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PLTLUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD7B0321C2A1AD200987F62 /* PLTLUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLTLUITests.swift; sourceTree = "<group>"; };
 		2BD7B0341C2A1AD200987F62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BD7B0401C2A1BED00987F62 /* TextInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputViewController.swift; sourceTree = "<group>"; };
+		2BD7B0421C2A1C9800987F62 /* PigLatinTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PigLatinTranslator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +100,12 @@
 			isa = PBXGroup;
 			children = (
 				2BD7B0121C2A1AD200987F62 /* AppDelegate.swift */,
-				2BD7B0141C2A1AD200987F62 /* ViewController.swift */,
 				2BD7B0161C2A1AD200987F62 /* Main.storyboard */,
 				2BD7B0191C2A1AD200987F62 /* Assets.xcassets */,
 				2BD7B01B1C2A1AD200987F62 /* LaunchScreen.storyboard */,
 				2BD7B01E1C2A1AD200987F62 /* Info.plist */,
+				2BD7B0401C2A1BED00987F62 /* TextInputViewController.swift */,
+				2BD7B0421C2A1C9800987F62 /* PigLatinTranslator.swift */,
 			);
 			path = PLTL;
 			sourceTree = "<group>";
@@ -256,7 +259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BD7B0151C2A1AD200987F62 /* ViewController.swift in Sources */,
+				2BD7B0431C2A1C9800987F62 /* PigLatinTranslator.swift in Sources */,
+				2BD7B0411C2A1BED00987F62 /* TextInputViewController.swift in Sources */,
 				2BD7B0131C2A1AD200987F62 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
